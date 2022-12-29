@@ -10,13 +10,14 @@ public class Position {
         this.taken = false;
     }
 
-    public boolean getTakenPosition(){
+    public boolean getTaken(){
         return taken;
     }
 
     public int getRow() {
         return row;
     }
+
     public int getCol(){
         return col;
     }
@@ -27,5 +28,9 @@ public class Position {
 
     public void setCol(int col) {
         this.col = col;
+    }
+
+    public void setTaken(boolean taken){
+        this.taken = taken;
     }
 }
