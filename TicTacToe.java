@@ -1,13 +1,21 @@
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+
 import java.util.*;
 
-public class TicTacToe {
 
+public class TicTacToe extends Application {
+
+    TictactoeView view;
     static ArrayList<Integer> playerPostion = new ArrayList<Integer>();
     static ArrayList<Integer> cpuPostion = new ArrayList<Integer>();
 
     static boolean endGame;
 
     public static void main(String[] args) {
+
+        launch(args);
 
         char[][] gameBoard = {{' ', '|', ' ', '|', ' '},
                             {'-', '+', '-', '+', '-'},
@@ -121,4 +129,8 @@ public class TicTacToe {
         return "";
     }
 
+    @Override
+    public void start(Stage stage) {
+        view = new TictactoeView(stage);
+    }
 }
